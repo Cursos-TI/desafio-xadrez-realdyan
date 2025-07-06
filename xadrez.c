@@ -4,61 +4,88 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-    //
-    const int torre = 5; /// 5 casas direita
-    const int bispo = 5; // 5 casas na diagonal cima e direita
-    const int rainha = 8; // 8 casas esquerda
-    const int cavalo = 1;
 
-
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-    
-// Movimentação da Torre usando while
+// Funcao de movimento da torre
+void movTorre(int y){
+    // Movimentação da Torre usando while
     int x = 0; // Variavel para calcular com valor 0
-    while (x < torre)
+    while (x < y) // loop para movimento torre
     {
         printf("Torre: Direita \n");
         x++;
-        
     }
+printf("\n");
+}
 
-    printf("\n");
-
-//Movimentação do Bispo usando do while
-    x = 0; // Variavel para calcular com valor 0
-    do
+    void movBispo (int y){
+    //Movimentação do Bispo usando do while
+    int x = 0; // Variavel para calcular com valor 0
+    for (int i = 0; i < y; i++)
     {
-        printf("Bispo: Cima \n");
-        printf("Bispo: Direita\n");
-        x++;
-    } while (x < bispo);
+        if (i >= x){
+            printf("Bispo: Cima \n");
+        }
+        
+        {
+         do
+         {
+         printf("Bispo: Direita\n");
+         x++;
+         } while (x <= i);
+    }
+        
+
+}
     
-    printf("\n");
+    
+printf("\n");
+}    
 
+
+void movRainha (int y){
 //Movimentação Rainha usando for
-    x = 0; // Variavel para calcular com valor 0
+    int x = 0; // Variavel para calcular com valor 0
 
-    for (int x = 0; x < rainha; x++)
+    for (int x = 0; x < y; x++)
     {
         printf("Rainha: Esquerda \n");
     }
     
     printf("\n");
 
+}
+
+
+int main() {
+    // Nível Novato - Movimentação das Peças
+    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    //
+
+    const int torre = 5; /// 5 casas direita
+    const int bispo = 5; // 5 casas na diagonal cima e direita
+    const int rainha = 8; // 8 casas esquerda
+    const int cavalo = 1;
+
+movTorre(torre);
+
+movBispo(bispo);
+
+movRainha(rainha);
+
+
+
+
+
 //Movimentação Cavalo usando for e while (usando loops aninhados)
-    x = 0;
+    int x = 0;
     for (int i = 0; i < cavalo; i++)
     {
         while (x < 2)
         {
-            printf("Cavalo: Baixo \n");
+            printf("Cavalo: Cima \n");
             x++;
         }
-        printf("Cavalo: Esquerda \n");
+        printf("Cavalo: Direita \n");
     }
     
 
