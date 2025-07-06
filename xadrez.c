@@ -11,8 +11,8 @@ int main() {
     const int torre = 5; /// 5 casas direita
     const int bispo = 5; // 5 casas na diagonal cima e direita
     const int rainha = 8; // 8 casas esquerda
-    
-    
+    const int cavalo = 1;
+
 
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
@@ -47,8 +47,20 @@ int main() {
         printf("Rainha: Esquerda \n");
     }
     
+    printf("\n");
 
-
+//Movimentação Cavalo usando for e while (usando loops aninhados)
+    x = 0;
+    for (int i = 0; i < cavalo; i++)
+    {
+        while (x < 2)
+        {
+            printf("Cavalo: Baixo \n");
+            x++;
+        }
+        printf("Cavalo: Esquerda \n");
+    }
+    
 
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
